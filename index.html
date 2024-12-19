@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Apostas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Meta Batida -->
+        <div class="meta-section">
+            <h2 class="meta-title">META BATIDA</h2>
+            <h1 class="meta-percentage">0,00
+            </h1>
+            <button class="new-meta-btn">INICIAR NOVA META</button>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-box">
+                <span>BANCA TEMPO REAL</span>
+                <!-- Campo de entrada para o valor -->
+                <input type="number" class="info-value orange" value="" step="any" id="bancaInput">
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-box">
+                <span>% DA APOSTA</span>
+                <!-- Campo de entrada para a porcentagem -->
+                <div class="input-container">
+                    <input type="number" class="info-value white" value="" step="any" id="percentageInput">
+                    <span class="percentage-sign">%</span>
+                </div>
+            </div>
+        </div>
+        
+            
+            <div class="info-section">
+    <div class="info-box">
+        <span>% DA BANCA</span>
+        <!-- Campo de entrada para a porcentagem -->
+        <div class="input-container">
+            <input type="number" class="info-value white" value="0.00" step="any" id="bancaInput">
+            <span class="percentage-sign">%</span>
+        </div>
+    </div>
+</div>
+
+        
+        <!-- Brancos e Meta -->
+        <div class="goal-section">
+            <div class="goal-box">
+                <span>BRANCOS POR META</span>
+                <div class="goal-value">5</div>
+            </div>
+            <div class="goal-box">
+                <span>META POR DIA</span>
+                <div class="goal-value">2</div>
+            </div>
+        </div>
+
+        <!-- Alertas e Meta Final -->
+        <div class="alerts-section">
+            <div class="alert-box green">
+                <span>% ALERTAS</span>
+                <div class="alert-value">10</div>
+            </div>
+            <div class="alert-box orange">
+                <span>% ALERTAS</span>
+                <div class="alert-value">15</div>
+            </div>
+            <div class="alert-box red">
+                <span>% ALERTAS</span>
+                <div class="alert-value">99</div>
+            </div>
+        </div>
+
+        <!-- Stop Green Meta -->
+        <div class="stop-green">
+            <div class="stop-box green">
+                <span>STOP GREEN META</span>
+                <div class="stop-value">216,85</div>
+            </div>
+        </div>
+
+        <!-- Tabela de Apostas -->
+        <table class="bet-table">
+            <tr>
+                <th>ALERTA</th>
+                <th>APOSTA</th>
+                <th>RISCO</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="bold">R$ 2,20</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2 Duplo</td>
+                <td>R$ 2,37</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>R$ 2,55</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>R$ 2,75</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>R$ 2,96</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>R$ 3,19</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>R$ 3,43</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>R$ 3,70</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>R$ 3,98</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>R$ 4,29</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
