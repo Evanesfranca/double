@@ -1,29 +1,47 @@
+const bancaInput = document.getElementById("bancaInput");
+const percentInput = document.getElementById("percentInput");
+const tableBody = document.getElementById("tableBody");
 
+function updateResults() {
+    const banca = parseFloat(bancaInput.value) || 0;
+    const percent = parseFloat(percentInput.value) || 0;
 
-// Referência ao campo de entrada
-    const percentageInput = document.getElementById('percentageInput');
+    // Limpa as linhas anteriores antes de adicionar as novas
+    tableBody.innerHTML = '';
 
-    // Variável para controlar se o valor foi confirmado
-    let confirmedValue = null;
+    // Gerando as linhas da tabela
+    for (let i = 1; i <= 100; i++) {
+        // Calcula o denominador
+        let denominator = 100 - (i * 5);
 
-    // Função para confirmar o valor ao pressionar Enter
-    function confirmPercentage() {
-        let value = parseFloat(percentageInput.value) || 0; // Pega o valor ou 0 se vazio
-        confirmedValue = value.toFixed(2); // Define o valor confirmado
-        percentageInput.value = confirmedValue; // Formata o campo
+        // Garantir que o denominador nunca seja menor que 1
+        if (denominator <= 0) {
+            denominator = 1; // Impede divisão por zero ou valores negativos
+        }
+
+        // Calcula o resultado normalmente
+        const result = (banca / denominator) * (percent / 100);
+        
+        const row = document.createElement('tr');
+
+        const alertCell = document.createElement('td');
+        alertCell.textContent = `${i}`;
+        
+        const betCell = document.createElement('td');
+        betCell.classList.add('bold');
+        betCell.innerHTML = `R$ ${result.toFixed(2)}`;
+
+        const riskCell = document.createElement('td');
+        // Adicionar qualquer lógica de estilo para a célula de risco, se necessário
+
+        row.appendChild(alertCell);
+        row.appendChild(betCell);
+        row.appendChild(riskCell);
+
+        tableBody.appendChild(row);
     }
+}
 
-    // Atualiza o campo ao digitar (substitui o valor anterior)
-    percentageInput.addEventListener('input', function () {
-        // Se o usuário começar a digitar, remove o valor confirmado anterior
-        if (confirmedValue !== null) {
-            confirmedValue = null; // Reseta o valor confirmado
-        }
-    });
-
-    // Confirma o valor ao pressionar Enter
-    percentageInput.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            confirmPercentage(); // Chama a função para formatar
-        }
-    });
+// Atualiza os resultados quando os inputs mudam
+bancaInput.addEventListener("input", updateResults);
+percentInput.addEventListener("input", updateResults);

@@ -11,44 +11,37 @@
         <!-- Meta Batida -->
         <div class="meta-section">
             <h2 class="meta-title">META BATIDA</h2>
-            <h1 class="meta-percentage">0,00
-            </h1>
-            <button class="new-meta-btn">INICIAR NOVA META</button>
+            <h1 class="meta-percentage">0,00</h1>
+            <button class="new-meta-btn" id="newMetaBtn">INICIAR NOVA META</button>
         </div>
         
         <div class="info-section">
             <div class="info-box">
                 <span>BANCA TEMPO REAL</span>
-                <!-- Campo de entrada para o valor -->
-                <input type="number" class="info-value orange" value="" step="any" id="bancaInput">
+                <input type="number" class="info-value orange" value="0" step="any" id="bancaInput">
             </div>
         </div>
         
         <div class="info-section">
             <div class="info-box">
                 <span>% DA APOSTA</span>
-                <!-- Campo de entrada para a porcentagem -->
                 <div class="input-container">
-                    <input type="number" class="info-value white" value="" step="any" id="percentageInput">
+                    <input type="number" class="info-value white" value="0" step="any" id="percentageInput">
                     <span class="percentage-sign">%</span>
                 </div>
             </div>
         </div>
         
-            
-            <div class="info-section">
-    <div class="info-box">
-        <span>% DA BANCA</span>
-        <!-- Campo de entrada para a porcentagem -->
-        <div class="input-container">
-            <input type="number" class="info-value white" value="0.00" step="any" id="bancaInput">
-            <span class="percentage-sign">%</span>
+        <div class="info-section">
+            <div class="info-box">
+                <span>% DA BANCA</span>
+                <div class="input-container">
+                    <input type="number" class="info-value white" value="0.00" step="any" id="percentInput" min="0" max="100">
+                    <span class="percentage-sign">%</span>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-        
-        <!-- Brancos e Meta -->
         <div class="goal-section">
             <div class="goal-box">
                 <span>BRANCOS POR META</span>
@@ -60,7 +53,6 @@
             </div>
         </div>
 
-        <!-- Alertas e Meta Final -->
         <div class="alerts-section">
             <div class="alert-box green">
                 <span>% ALERTAS</span>
@@ -76,7 +68,6 @@
             </div>
         </div>
 
-        <!-- Stop Green Meta -->
         <div class="stop-green">
             <div class="stop-box green">
                 <span>STOP GREEN META</span>
@@ -84,65 +75,18 @@
             </div>
         </div>
 
-        <!-- Tabela de Apostas -->
         <table class="bet-table">
             <tr>
                 <th>ALERTA</th>
                 <th>APOSTA</th>
                 <th>RISCO</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td class="bold">R$ 2,20</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2 Duplo</td>
-                <td>R$ 2,37</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>R$ 2,55</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>R$ 2,75</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>R$ 2,96</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>R$ 3,19</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>R$ 3,43</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>R$ 3,70</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>R$ 3,98</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>R$ 4,29</td>
-                <td></td>
-            </tr>
+            <tbody id="tableBody">
+                <!-- As linhas serão geradas dinamicamente aqui -->
+            </tbody>
         </table>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

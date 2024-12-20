@@ -417,6 +417,28 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 
+.info-section {
+    margin-bottom: 10px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;}
+
+
+    .green-cell {
+        background-image: linear-gradient(to right, #07aa8f, #2ddfc7); /* Gradiente de verde */
+
+        text-align: center; /* Alinha o texto ao centro */
+        padding: 8px; /* Adiciona um pouco de espaçamento interno */
+        border-radius: 4px; /* Para bordas arredondadas, opcional */
+    }
+
 
 
 
